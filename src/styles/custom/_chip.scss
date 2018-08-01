@@ -1,0 +1,77 @@
+tag-input.form-control {
+  min-height: 65px !important;
+  padding-left: 5px !important;
+  padding-right: 5px !important;
+  padding-top: 0 !important;
+  padding-bottom: 0 !important;
+  height: 100% !important;
+
+  > div.ng2-tag-input {
+    border: none !important;
+
+    tag {
+      padding: 0 5px 0 10px !important;
+      border-radius: 5px !important;
+      border: 1px solid rgba(98, 98, 98, 0.27) !important;
+      background: #fff;
+      font-size: 12px !important;
+      height: 25px !important;
+
+      div.tag-wrapper {
+        position: relative !important;
+        top: -5px !important;
+        div.tag__text {
+          height: 25px !important;
+        }
+      }
+    }
+
+    tag-input-form > form > input.ng2-tag-input__text-input {
+      height: 30px !important;
+      padding: 0 0.5em !important;
+      &::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+        color: #c1c1c1;
+      }
+      &::-moz-placeholder { /* Firefox 19+ */
+        color: #c1c1c1;
+      }
+      &:-ms-input-placeholder { /* IE 10+ */
+        color: #c1c1c1;
+      }
+      &:-moz-placeholder { /* Firefox 18- */
+        color: #c1c1c1;
+      }
+    }
+
+    tag-input-form {
+      width: 100%;
+      .ng2-tag-input__text-input {
+        width: 100%;
+      }
+    }
+  }
+  > div.error-messages {
+    padding-left: 5px;
+  }
+}
+ng2-dropdown-menu {
+  .ng2-dropdown-menu {
+    max-height: 200px !important;
+    border: none !important;
+    border-radius: 3px !important;
+    font-size: 12px !important;
+    margin: 0 !important;
+    background: #fafafa !important;
+  }
+  .ng2-menu-item {
+    line-height: unset !important;
+    height: 24px !important;
+    font-size: 12px !important;
+    color: #333 !important;
+    padding: 3px 10px !important;
+    background-color: inherit !important;
+  }
+  .ng2-menu-item:hover {
+    background-color: #428bca !important;
+  }
+}

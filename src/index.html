@@ -1,14 +1,247 @@
-<!doctype html>
-<html lang="en">
+<!DOCTYPE html>
+<html>
 <head>
-  <meta charset="utf-8">
-  <title>MyProject</title>
   <base href="/">
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="keywords" content="HTML,CSS,Angular,Angular 2,Angular 4,Angular 5,Bootstrap">
+  <meta name="author" content="Kei Huynh">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no"/>
+  <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+  <meta http-equiv="Pragma" content="no-cache">
+  <meta http-equiv="Expires" content="0">
 
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <title>TSC Order Tracking System</title>
+
+  <!-- Loader style -->
+  <style type="text/css">
+    /* The Loader */
+    #loader-wrapper {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 10;
+      overflow: hidden;
+    }
+
+    .no-js #loader-wrapper {
+      display: none;
+    }
+
+    #loader-wrapper .loader-section {
+      position: fixed;
+      top: 0;
+      width: 51%;
+      height: 100%;
+      background: #222;
+      z-index: 10;
+    }
+
+    #loader-wrapper .loader-section.section-left {
+      left: 0;
+    }
+
+    #loader-wrapper .loader-section.section-right {
+      right: 0;
+    }
+
+    /* Loaded styles */
+    .loaded #loader-wrapper .loader-section.section-left {
+      -webkit-transform: translateX(-100%);
+      transform: translateX(-100%);
+      -webkit-transition: all 0.7s 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
+      transition: all 0.7s 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
+    }
+
+    .loaded #loader-wrapper .loader-section.section-right {
+      -webkit-transform: translateX(100%);
+      transform: translateX(100%);
+      -webkit-transition: all 0.7s 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
+      transition: all 0.7s 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
+    }
+
+    .loaded #loader {
+      opacity: 0;
+      -webkit-transition: all 0.3s ease-out;
+      transition: all 0.3s ease-out;
+    }
+
+    .loaded #loader-wrapper {
+      visibility: hidden;
+      -webkit-transform: translateY(-100%);
+      transform: translateY(-100%);
+      -webkit-transition: all 0.3s 1s ease-out;
+      transition: all 0.3s 1s ease-out;
+    }
+
+    /* EFFECT */
+
+    #loader {
+      display: block;
+      position: relative;
+      left: 50%;
+      top: 50%;
+      width: 40px;
+      height: 40px;
+      margin: -20px 0 0 -20px;
+      z-index: 11;
+    }
+
+    #loader .text{
+      text-transform: uppercase;
+      margin-left: -33px;
+      margin-top: 5px;
+      color: #dedede;
+    }
+
+    .sk-cube-grid {
+      width: 40px;
+      height: 40px;
+    }
+
+    .sk-cube-grid .sk-cube {
+      width: 33%;
+      height: 33%;
+      background-color: #eaeaea;
+      float: left;
+      -webkit-animation: sk-cubeGridScaleDelay 1.3s infinite ease-in-out;
+      animation: sk-cubeGridScaleDelay 1.3s infinite ease-in-out;
+    }
+    .sk-cube-grid .sk-cube1 {
+      -webkit-animation-delay: 0.2s;
+      animation-delay: 0.2s; }
+    .sk-cube-grid .sk-cube2 {
+      -webkit-animation-delay: 0.3s;
+      animation-delay: 0.3s; }
+    .sk-cube-grid .sk-cube3 {
+      -webkit-animation-delay: 0.4s;
+      animation-delay: 0.4s; }
+    .sk-cube-grid .sk-cube4 {
+      -webkit-animation-delay: 0.1s;
+      animation-delay: 0.1s; }
+    .sk-cube-grid .sk-cube5 {
+      -webkit-animation-delay: 0.2s;
+      animation-delay: 0.2s; }
+    .sk-cube-grid .sk-cube6 {
+      -webkit-animation-delay: 0.3s;
+      animation-delay: 0.3s; }
+    .sk-cube-grid .sk-cube7 {
+      -webkit-animation-delay: 0s;
+      animation-delay: 0s; }
+    .sk-cube-grid .sk-cube8 {
+      -webkit-animation-delay: 0.1s;
+      animation-delay: 0.1s; }
+    .sk-cube-grid .sk-cube9 {
+      -webkit-animation-delay: 0.2s;
+      animation-delay: 0.2s; }
+
+    @-webkit-keyframes sk-cubeGridScaleDelay {
+      0%, 70%, 100% {
+        -webkit-transform: scale3D(1, 1, 1);
+        transform: scale3D(1, 1, 1);
+      } 35% {
+          -webkit-transform: scale3D(0, 0, 1);
+          transform: scale3D(0, 0, 1);
+        }
+    }
+
+    @keyframes sk-cubeGridScaleDelay {
+      0%, 70%, 100% {
+        -webkit-transform: scale3D(1, 1, 1);
+        transform: scale3D(1, 1, 1);
+      } 35% {
+          -webkit-transform: scale3D(0, 0, 1);
+          transform: scale3D(0, 0, 1);
+        }
+    }
+
+  </style>
+
+  <style type="text/css" media="print">
+    @page {
+      size: letter landscape;
+      margin: 0;
+      padding: 0;
+    }
+    body {
+      zoom: 70%;
+      -webkit-print-color-adjust: exact !important;   /* Chrome, Safari */
+      color-adjust: exact !important;                 /*Firefox*/
+    }
+    .delete-order, .cancel-style {
+      display: none !important;
+    }
+    sales-order > hr {
+      margin-top: 5px !important;
+      border: none !important;
+    }
+    .control-label > label {
+      margin-bottom: 0 !important;
+    }
+    .checkbox label::before {
+      border-color: white !important;
+      border: 1px solid #888 !important;
+    }
+    .checkbox label::after {
+      color: #555 !important;
+    }
+    .blank-form, .blank-form div {
+      page-break-inside: avoid;
+    }
+    a.tag {
+      background: #fff !important;
+      color: inherit !important;
+      border: 1px solid #ccc !important;
+      border-radius: 3px !important;
+    }
+    a.tag::before {
+      background: #ccc !important;
+    }
+    a.tag::after {
+      display: none !important;
+    }
+    .py-1 {
+      padding-top: 0.15rem !important;
+      padding-bottom: 0.15rem !important;
+    }
+    ng-select.ng-select .ng-control {
+      height: 25px!important;
+      min-height: 25px!important;
+    }
+    .form-control {
+      padding: 5px 12px;
+      min-height: 26px!important;
+      height: 26px!important;
+    }
+    .order-general .row.flex.py-1:not(.textarea) {
+      height: 28px;
+    }
+    div.table-wrapper > table {
+      margin-bottom: 0 !important;
+    }
+    blank .style-table td, blank .style-table th {
+      padding: .3em .4em!important;
+    }
+  </style>
 </head>
+
 <body>
-  <app-root></app-root>
+  <app></app>
+
+<!-- Google Analytics: change UA-71073175-1 to be your site's ID -->
+<!--<script>-->
+<!--(function(A,n,g,u,l,a,r){A.GoogleAnalyticsObject=r;A[l]=A[l]||function(){-->
+<!--(A[l].q=A[l].q||[]).push(arguments)},A[l].l=1*new Date();a=n.createElement(g),-->
+<!--r=n.getElementsByTagName(g)[0];a.async=1;a.src=u;r.parentNode.insertBefore(a,r)-->
+<!--})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');-->
+
+<!--ga('create', 'UA-71073175-1', 'auto');-->
+<!--ga('send', 'pageview');-->
+<!--</script>-->
+
+
 </body>
 </html>

@@ -1,0 +1,42 @@
+@import '~bootstrap/scss/bootstrap.scss';
+
+// Count from src/styles folder
+$fa-font-path: "../../node_modules/font-awesome/fonts" !default;
+@import '~font-awesome/scss/font-awesome.scss';
+
+$glyphicons-halflings-font-path: '../../node_modules/glyphicons-halflings/fonts';
+$glyphicons-halflings-class-prefix: 'glyphicon';
+@import '~glyphicons-halflings/scss/glyphicons-halflings';
+
+@import '~nprogress/nprogress.css';
+
+@import '~basscss/css/basscss.css';
+
+@import '~perfect-scrollbar/css/perfect-scrollbar.css';
+
+@import '~@swimlane/ngx-datatable/release/index.css';
+@import '~@swimlane/ngx-datatable/release/themes/material.css';
+@import '~@swimlane/ngx-datatable/release/assets/icons.css';
+
+@import '~@ng-select/ng-select/themes/default.theme.css';
+
+@import '~ngx-toastr/toastr';
+
+@import '~dragula/dist/dragula.css';
+
+@import '~ngx-draggable-widget/NgDraggableWidget.css';
+
+@import './bootstrap3';
+
+@import './custom/checkbox';
+@import './custom/loadingBar';
+@import './custom/myDatePicker';
+@import './custom/form';
+@import './custom/breadcrumb';
+@import './custom/table';
+@import './custom/scroll';
+@import './custom/chip';
+
+@import './pages';
+@import './custom/pages';
+@import './custom/ngSelect';

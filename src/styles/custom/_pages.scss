@@ -1,0 +1,227 @@
+.main-body .page-container {
+  background: #fff !important;
+}
+
+input:focus::-webkit-input-placeholder {
+  color: transparent !important;
+}
+
+input:focus:-moz-placeholder {
+  color: transparent !important;
+}
+
+/* FF 4-18 */
+input:focus::-moz-placeholder {
+  color: transparent !important;
+}
+
+/* FF 19+ */
+input:focus:-ms-input-placeholder {
+  color: transparent !important;
+}
+
+/* IE 10+ */
+textarea:focus::-webkit-input-placeholder {
+  color: transparent !important;
+}
+
+textarea:focus:-moz-placeholder {
+  color: transparent !important;
+}
+
+textarea:focus::-moz-placeholder {
+  color: transparent !important;
+}
+
+@media (min-width: 1680px) {
+  .modal-w-1200 {
+    .modal-lg {
+      max-width: 1200px;
+    }
+    .hr-space {
+      width: 1200px;
+    }
+  }
+}
+
+@media (min-width: 1024px) {
+  .modal-w-1000 {
+    .modal-lg {
+      max-width: 1000px;
+    }
+    .hr-space {
+      width: 1000px;
+    }
+  }
+  .super-lg {
+    .modal-lg {
+      max-width: 960px;
+    }
+    .hr-space {
+      width: 960px;
+    }
+  }
+  .eta-lg {
+    .modal-lg {
+      max-width: 800px;
+    }
+    .hr-space {
+      width: 800px;
+    }
+  }
+  .eta-ls {
+    .modal-lg {
+      max-width: 700px;
+    }
+    .hr-space {
+      width: 700px;
+    }
+  }
+  .eta-sm {
+    .modal-lg {
+      max-width: 630px;
+    }
+    .hr-space {
+      width: 630px;
+    }
+  }
+  .eta-xs {
+    .modal-lg {
+      max-width: 430px;
+    }
+    .hr-space {
+      width: 430px;
+    }
+  }
+  .eta-xs-large {
+    .modal-lg {
+      max-width: 530px;
+    }
+    .hr-space {
+      width: 530px;
+    }
+  }
+}
+
+/*------------------------------------------------------------------
+[22. Login]
+*/
+
+.login-wrapper {
+  .login-container {
+    width: 496px;
+    display: block;
+    position: absolute;
+    top: 10%;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+  }
+}
+
+/* Responsive handlers : Login
+------------------------------------
+*/
+
+@media (max-width: 768px) {
+  .login-wrapper {
+    .login-container {
+      width: 100%;
+    }
+  }
+}
+
+@media only screen and (max-width: 321px) {
+  .login-wrapper {
+    .login-container {
+      width: 100%;
+    }
+  }
+}
+
+.modal.fade {
+  overflow-y: auto;
+}
+
+.modal.ontop {
+  z-index: 99999;
+}
+
+.sticky-btn {
+  position: fixed;
+  width: 100%;
+  text-align: center;
+  bottom: 0px;
+  left: 0px;
+  padding: 10px 0;
+  background-color: #eee;
+  z-index: 2;
+}
+
+.line-through {
+  text-decoration: line-through;
+}
+
+imports-main, outsource-main, order-main, sample-main, project-main, products-main, project-priority {
+  #importTable, #outsourceTable, #orderLogTable, #sampleDevTable, #projectTable, #productMainTable, #verticalTable, #horizontalTable {
+    perfect-scrollbar {
+      .ps__rail-x {
+        z-index: 102 !important;
+      }
+      @media (min-width: 992px) {
+        .ps__rail-x {
+          position: fixed !important;
+          left: 85px !important;
+        }
+      }
+      @media (max-width: 990px) {
+        .ps__rail-x {
+          position: fixed !important;
+          left: 15px !important;
+        }
+      }
+    }
+  }
+}
+
+.menu-pin {
+  imports-main, outsource-main, order-main, sample-main, project-main, products-main, project-priority {
+    #importTable, #outsourceTable, #orderLogTable, #sampleDevTable, #projectTable, #productMainTable, #verticalTable, #horizontalTable {
+      perfect-scrollbar {
+        .ps__rail-x {
+          left: 207px !important;
+        }
+      }
+    }
+  }
+}
+
+.cell-hover {
+  background-color: #daeffd !important;
+  p.stt-red:not(.stt-p) {
+    background-color: #daeffd !important;
+  }
+}
+
+.cell-hover-bg {
+  background-color: #daeffd !important;
+  p.stt-red:not(.stt-p) {
+    //background-color: #daeffd !important;
+  }
+}
+
+.cell-hover-p {
+  @extend .cell-hover;
+  p.p-link {
+    color: #48b0f7;
+    text-decoration: underline;
+  }
+}
+
+.cell-hover-p-not-bg {
+  p.p-link {
+    color: #48b0f7;
+    text-decoration: underline;
+  }
+}

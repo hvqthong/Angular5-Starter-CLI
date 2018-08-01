@@ -1,0 +1,271 @@
+.indeterminate {
+  label::after {
+    content: "\F068" !important;
+    left: 4px !important;
+  }
+}
+
+.ngx-datatable {
+  overflow: visible !important;
+  font-size: 11.5px;
+  .datatable-header {
+    background: #f1f1f1;
+    .datatable-row-center {
+      display: flex;
+    }
+  }
+  .datatable-body {
+    width: min-content !important;
+  }
+  // -------------Fixed scroll on IPad-------------
+  table {
+    overflow: hidden !important;
+  }
+  .datatable-scroll {
+    -webkit-overflow-scrolling: touch;
+  }
+  // ----------------------------------------------
+  .visible {
+    overflow: visible !important;
+    .datatable-header, .datatable-body {
+      overflow: visible !important;
+    }
+  }
+  input[type=text] {
+    display: block;
+    background: transparent;
+    width: 100%;
+    border: none;
+    border-bottom: 1px solid #5264AE;
+  }
+  .checkbox {
+    box-sizing: border-box;
+    margin-bottom: 0;
+    margin-top: 0;
+  }
+  .datatable-row-odd {
+    .datatable-body-cell {
+      background-color: whitesmoke;
+    }
+  }
+  .datatable-row-odd:hover {
+    .datatable-body-cell {
+      background-color: #daeffd;
+    }
+  }
+  .highlight-row {
+    .datatable-body-cell {
+      background-color: #daeffd !important;
+    }
+  }
+
+  datatable-header-cell {
+    color: #666;
+  }
+
+  .datatable-row-wrapper.row-highlight {
+    //border: 2px solid #48b0f7 !important;
+  }
+  .sort-btn {
+    position: absolute !important;
+    top: 11px !important;
+    right: 5px !important;
+  }
+}
+
+.ngx-datatable.material {
+  -webkit-box-shadow: none !important;
+  box-shadow: none !important;
+  .datatable-header .datatable-header-cell, .datatable-body .datatable-body-row .datatable-body-cell {
+    padding: .5rem 0.6rem;
+    font-size: inherit !important;
+  }
+  .empty-row {
+    white-space: nowrap;
+  }
+}
+
+/* allow selection  */
+.ngx-datatable .datatable-body-cell, .ngx-datatable .datatable-header-cell {
+  -webkit-user-select: text !important;
+  -moz-user-select: text !important;
+  -ms-user-select: text !important;
+  -o-user-select: text !important;
+  user-select: text !important;
+}
+
+.ngx-datatable .datatable-body-row .datatable-body-cell-label {
+  top: 0 !important;
+  -webkit-transform: translateY(0) !important;
+  -ms-transform: translateY(0) !important;
+  transform: translateY(0) !important;
+}
+
+.ngx-table-hover {
+  .datatable-body-cell {
+    cursor: pointer;
+  }
+}
+
+.datatable-header {
+  border-bottom: 0 !important;
+  .datatable-header-inner {
+    width: 100% !important;
+    .datatable-row-center {
+      width: 100% !important;
+    }
+  }
+  .datatable-header-cell {
+    color: #666 !important;
+    line-height: 1.125rem !important;
+    font-weight: bold !important;
+    background-color: #f1f1f1;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.12);
+    border-top: 1px solid rgba(0, 0, 0, 0.12);
+  }
+}
+
+@media (min-width: 1350px) {
+  .datatable-header {
+    .datatable-header-inner {
+      width: 100% !important;
+      .datatable-row-center {
+        width: 100% !important;
+      }
+    }
+  }
+  .datatable-body {
+    .datatable-scroll {
+      width: 100% !important;
+      .datatable-body-row {
+        width: 100% !important;
+        .datatable-row-center {
+          width: 100% !important;
+        }
+      }
+    }
+  }
+}
+
+.dataTables_wrapper label select {
+  height: 25px !important;
+  padding: 0 12px !important;
+  min-height: 25px !important;
+}
+
+.page-size {
+  margin-top: 5px;
+}
+
+.paddingTop-0 {
+  padding-bottom: 5px !important;
+}
+
+.datatable-body-cell {
+  display: flex !important;
+  align-items: center;
+}
+
+.ngx-datatable {
+  .datatable-header-cell:nth-of-type(1), .datatable-body-cell:nth-of-type(1) {
+    .checkbox {
+      position: absolute !important;
+      transform: translateY(-55%);
+      margin-bottom: 0 !important;
+      margin-top: -.3em !important;
+      padding-left: 0 !important;
+      label {
+        margin-right: 0;
+        margin-bottom: 0 !important;
+        &:before {
+          margin-right: 0;
+          top: -2.2px;
+        }
+        &:after {
+          top: -4px;
+        }
+      }
+    }
+    .checkbox.check-all {
+      left: 0.05em;
+      label {
+        &:before {
+          top: 1.4px;
+          left: 3px;
+        }
+        &:after {
+          top: 0;
+          left: 6.5px;
+        }
+      }
+      &:after {
+        margin-top: 0;
+      }
+    }
+    .checkbox.check-each {
+      left: 0.1em;
+      -webkit-transform: translateY(-95%) !important;
+      -ms-transform: translateY(-95%) !important;
+      transform: translateY(-95%) !important;
+    }
+  }
+
+  .datatable-header-cell:first-child, .datatable-body-cell:first-child {
+    padding: .5rem 0.2rem !important;
+    border-left: 1px solid #e2e8ec;
+  }
+  .datatable-header-cell, .datatable-body-cell {
+    border-right: 1px solid #e2e8ec;
+  }
+  datatable-scroller {
+    width: auto !important;
+  }
+  .datatable-header-inner {
+    width: auto !important;
+  }
+}
+
+.dragging-table {
+  td {
+    height: 43px;
+    background: #fff !important;
+    padding: .5em 0.4em !important;
+    color: #2c2c2c !important;
+    text-align: center !important;
+    font-size: 12px !important;
+    border: 1px solid rgba(230, 230, 230, 0.8);
+    white-space: nowrap !important;
+    vertical-align: middle;
+    .btn-default.active {
+      color: #fff !important;
+      background-color: #3c8dbc !important;
+      border-color: #3c8dbc !important;
+    }
+    .btn-radio {
+      height: 30px;
+      padding: 2px 9px;
+    }
+    .apply-all {
+      -webkit-transform: rotate(90deg);
+      -moz-transform: rotate(90deg);
+      -o-transform: rotate(90deg);
+      -ms-transform: rotate(90deg);
+      transform: rotate(90deg);
+    }
+    .un-p-link {
+      color: red;
+    }
+    .btn {
+      display: block !important;
+    }
+  }
+  td:first-child {
+    width: 80px;
+  }
+  td:not(:first-child):not(:last-child) {
+    width: 150px;
+  }
+  td:last-child {
+    width: 50px;
+  }
+}

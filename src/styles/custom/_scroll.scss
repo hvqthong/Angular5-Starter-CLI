@@ -1,0 +1,54 @@
+ng-sidebar-container {
+  overflow: hidden;
+  ng-sidebar aside {
+    position: fixed !important;
+  }
+}
+
+.ps__rail-x {
+  opacity: 1 !important;
+}
+
+input:-webkit-autofill:focus {
+  box-shadow: none !important;
+  -webkit-box-shadow: none !important;
+  -moz-box-shadow: none !important;
+}
+
+perfect-scrollbar {
+  .ps__rail-y {
+    z-index: 20;
+  }
+
+  @media (min-width: 1366px) {
+    :not(order-main) .ps__rail-x {
+      //display: none !important;
+    }
+  }
+}
+
+@media only screen and (min-width: 980px) {
+  body.menu-pin .page-container .page-content-wrapper, .main-body.menu-pin .page-container .page-content-wrapper {
+    artwork-view perfect-scrollbar .ps__rail-x,
+    user-main perfect-scrollbar .ps__rail-x,
+    order-notification perfect-scrollbar .ps__rail-x,
+    schedules-print perfect-scrollbar .ps__rail-x {
+      left: 207px !important;
+    }
+  }
+}
+
+.scroll-sm {
+  .ps__rail-x {
+    height: 6px !important;
+    .ps__thumb-x {
+      bottom: 0 !important;
+      height: 6px !important;
+    }
+  }
+  & > .ps__rail-x:active, .ps__rail-x:hover {
+    & > .ps__thumb-x {
+      height: 6px !important;
+    }
+  }
+}
